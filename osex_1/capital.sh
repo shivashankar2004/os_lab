@@ -1,3 +1,3 @@
-echo "enter a string in lowercase"
-read input
+$#!/bin/bash
+read -p " enter input:" input
 echo  "string in uppercase is"${input^^}

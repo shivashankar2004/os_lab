@@ -22,17 +22,17 @@ void insert(int pr,int ar,int bt){
     newnode->remaintime=bt;
     newnode->next=NULL;
 
-    if(head==NULL){
-        head=newnode;//in circular..
+    if(head==NULL){//in circular..
         newnode->next=head;
+        head=newnode;
     }
     else{
         node*temp=head;
-        while(temp->next!=head ){//in circular linked list..
+        while(temp->next!=NULL ){//in circular linked list..
             temp=temp->next;
         }
+        newnode->next=temp->next;
         temp->next=newnode;
-        newnode->next=head;
     }
 }
 
@@ -61,7 +61,7 @@ temp=head;
 do{
     k++;
     temp=temp->next;
-}while(temp!=head);
+}while(temp!=NULL);
 int y=k;
 curr=head;
 for(s=0,i=0;k!=0;){
@@ -81,12 +81,13 @@ for(s=0,i=0;k!=0;){
         tat=tat+s-curr->arrival;
         count=0;
     }
-    if(curr->next==head){
+    if(curr->next==NULL){
         curr=head;
     }
     else{
         curr=curr->next;
-    }}
+    }
+    }
     int avgwt=wt/y;
     int avgtat=tat/y;
     printf("avg time %d",avgwt);

@@ -1,10 +1,8 @@
 echo "enter number"
 read Num
 g=$Num
- 
 
 s=0
- 
 
 while [ $Num -gt 0 ]
 do
