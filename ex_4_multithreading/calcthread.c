@@ -54,4 +54,7 @@ int main(int argc, char *argv[])
     return EXIT_SUCCESS;
 }
 //gcc -o calcthread calcthread.c -pthread
-// ./calcthread 20 23 67 54 11
+// ./calcthread 20 23 67 54 11 o/p is
+// avg is 35
+// minimum is 11
+// maximum is 67
