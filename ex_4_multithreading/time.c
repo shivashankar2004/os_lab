@@ -71,4 +71,9 @@ int main(){
         printf("%.8f",cpu_time);
     }
     return 0;
-}
+ }
+// $date
+// Tue Apr  9 18:52:40 IST 2024
+// 0.000$ls
+// a.out  calcthread  calcthread.c  primethread  primethread.c  time.c
+// 0.000$time ls
