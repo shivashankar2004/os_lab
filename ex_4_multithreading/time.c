@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<unistd.h>
+#include <time.h>
 #include<sys/wait.h>
 #define MAX 60
 int main(){
@@ -17,7 +18,7 @@ int main(){
         //2.)read an input
         char inp[MAX];
         fgets(inp,MAX,stdin);
-    
+        start=clock();
         //3.) parsing line into program and command
         char *token;
         token=strtok(inp,"\n");
@@ -64,8 +65,10 @@ int main(){
         else{
             wait(NULL);//wait function
         }
-        
-        
+        end =clock();
+
+        cpu_time=((double)start-end)/CLOCKS_PER_SEC;
+        printf("%.8f",cpu_time);
     }
     return 0;
 }
