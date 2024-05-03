@@ -51,7 +51,6 @@ int main(){
     pthread_mutex_destroy(&mutex);
     printf("sushi closed\n");
     return 0;
-
  }
 
 // gcc sushi.c -o sus -pthread
