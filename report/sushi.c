@@ -17,7 +17,7 @@ void *arrival(void *arg){
         printf("customer %d leaves sushi bar\n\n",cid);
     }
     else{
-        printf("no seats available.customer %d leaves\n",cid);
+        printf(".customer %d waits\n",cid);
     }
    // pthread_mutex_unlock(&mutex);
     pthread_exit(NULL);
